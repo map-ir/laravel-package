@@ -17,8 +17,8 @@ class MapirLaravelServiceProvider extends ServiceProvider
     {
         // for publish the Mapirlaravel config file to the main app config folder
         $this->publishes([
-            __DIR__.'/config/mapir.php' => config_path('mapir.php'),
-        ]);
+            __DIR__.'/../config/mapir.php' => config_path('mapir.php')
+        ], 'mapir');
     }
 
     /**
@@ -30,7 +30,7 @@ class MapirLaravelServiceProvider extends ServiceProvider
     {
         // bind the Mapirlaravel Facade
         $this->app->bind('Mapir', function () {
-            return new MapirLaravel;
+            return new MapirLaravel();
         });
     }
 }
