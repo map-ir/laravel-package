@@ -45,6 +45,7 @@ After publish the package files you must open mapir.php in config folder and set
  add package service provider in bootstrap/app.php.
  ~~~
  $app->register(Shiveh\Mapir\MapirLaravelServiceProvider::class);
+ class_alias(Shiveh\Mapir\MapirLaravelFacade::class, 'Mapir');
  ~~~
  copy package config directory `vendor/shiveh/mapir/config` to root folder alongside with app directory.
  
