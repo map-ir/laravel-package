@@ -1,0 +1,30 @@
+{
+    "name": "shiveh/mapir",
+    "description": "Offcial Map.ir Larvel package",
+    "keywords": ["laravel", "map", "نقشه", "مپ", "geo", "map.ir"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Armin Nasiri",
+            "email": "a.nasiri@map.ir"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Shiveh\\Mapir\\": "src/"
+        }
+    },
+    "require": {
+        "guzzlehttp/guzzle": "~6.0"
+    },
+    "extra": {
+    "laravel": {
+        "providers": [
+            "Shiveh\\Mapir\\MapirLaravelServiceProvider"
+        ],
+        "aliases": {
+            "Mapir": "\\Shiveh\\Mapir\\MapirLaravelFacade"
+        }
+    }
+}
+}
