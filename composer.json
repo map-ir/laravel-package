@@ -1,6 +1,6 @@
 {
     "name": "shiveh/mapir",
-    "description": "Offcial Map.ir Larvel package",
+    "description": "Offcial Map.ir Laravel package",
     "keywords": ["laravel", "map", "نقشه", "مپ", "geo", "map.ir"],
     "license": "MIT",
     "authors": [
