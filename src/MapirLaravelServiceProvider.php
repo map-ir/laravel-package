@@ -16,9 +16,12 @@ class MapirLaravelServiceProvider extends ServiceProvider
     public function boot()
     {
         // for publish the Mapirlaravel config file to the main app config folder
-        $this->publishes([
-            __DIR__.'/../config/mapir.php' => config_path('mapir.php')
-        ], 'mapir');
+        if (str_contains($this->app->version(), 'Lumen')) {
+        }else {
+            $this->publishes([
+                __DIR__ . '/../config/mapir.php' => config_path('mapir.php')
+            ], 'mapir');
+        }
     }
 
     /**
