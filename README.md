@@ -49,6 +49,11 @@ After publish the package files you must open mapir.php in config folder and set
  ~~~
  copy package config directory `vendor/shiveh/mapir/config` to root folder alongside with app directory.
  
+ update bootstrap/app.php by adding this line in `Register Config Files` section:
+  ~~~
+  $app->configure('mapir');
+  ~~~
+ 
  Making Lumen work with facades by uncommenting this line in bootstrap/app.php.
  ~~~
  $app->withFacades();
