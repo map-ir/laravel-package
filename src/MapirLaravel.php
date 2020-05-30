@@ -16,7 +16,7 @@ class MapirLaravel
                 'location' => $location
             ];
             $header=[
-                'x-api-key' => config('mapir.api-key','Your map.ir api key'),
+                'x-api-key' => config('mapir.x-api-key','Your map.ir api key'),
                 'Content-Type' => 'application/json'
             ];
             $result= $client->request(
@@ -40,7 +40,7 @@ class MapirLaravel
             'location' => $location
         ];
         $header=[
-            'x-api-key' => config('mapir.api-key','Your map.ir api key'),
+            'x-api-key' => config('mapir.x-api-key','Your map.ir api key'),
             'Content-Type' => 'application/json'
         ];
         $result= $client->request(
@@ -63,7 +63,7 @@ class MapirLaravel
             'lon' => $lon,
         ];
         $header=[
-            'x-api-key' => config('mapir.api-key','Your map.ir api key'),
+            'x-api-key' => config('mapir.x-api-key','Your map.ir api key'),
             'Content-Type' => 'application/json'
         ];
         $result= $client->request(
@@ -85,7 +85,7 @@ class MapirLaravel
             'lon' => $lon,
         ];
         $header=[
-            'x-api-key' => config('mapir.api-key','Your map.ir api key'),
+            'x-api-key' => config('mapir.x-api-key','Your map.ir api key'),
             'Content-Type' => 'application/json'
         ];
         $result= $client->request(
