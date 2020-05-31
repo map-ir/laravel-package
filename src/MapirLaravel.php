@@ -172,5 +172,28 @@ class MapirLaravel
             return json_decode($e->getResponse()->getBody());
         }
     }
+    
+    public static function distanceMatrix($origins, $destinations)
+    {
+        try{
+            $client= new Client();
+            $query=[
+                'origins' =>$origins,
+                'destinations' => $destinations,
+            ];
+            $header=[
+                'x-api-key' => config('mapir.x-api-key','Your map.ir api key'),
+                'Content-Type' => 'application/json'
+            ];
+            $result= $client->request(
+                'GET',
+                config('mapir.webservice-url','https://map.ir').'/distancematrix',
+                ['headers'=>$header, 'query'=>$query]
+            );
+            return json_decode($result->getBody(),true);
+        } catch (RequestException $e) {
+            return json_decode($e->getResponse()->getBody());
+        }
+    }
 
 }
