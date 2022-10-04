@@ -5,6 +5,15 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
 class MapirLaravel
 {
+    /**
+     * @param $text
+     * @param $select
+     * @param $filter
+     * @param $location
+     *
+     * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
     public static function search($text, $select, $filter, $location)
     {
         try{
@@ -29,6 +38,16 @@ class MapirLaravel
             return json_decode($e->getResponse()->getBody());
         }
     }
+
+    /**
+     * @param $text
+     * @param $select
+     * @param $filter
+     * @param $location
+     *
+     * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
     public static function searchAutocomplete($text, $select, $filter, $location)
     {
         try{
@@ -54,6 +73,14 @@ class MapirLaravel
         }
 
     }
+
+    /**
+     * @param $lat
+     * @param $lon
+     *
+     * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
     public static function reverse($lat, $lon)
     {
         try{
@@ -76,6 +103,14 @@ class MapirLaravel
             return json_decode($e->getResponse()->getBody());
         }
     }
+
+    /**
+     * @param $lat
+     * @param $lon
+     *
+     * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
     public static function fastReverse($lat, $lon)
     {
         try{
@@ -98,6 +133,17 @@ class MapirLaravel
             return json_decode($e->getResponse()->getBody());
         }
     }
+
+    /**
+     * @param          $text
+     * @param  string  $select
+     * @param  string  $filter
+     * @param  int     $lat
+     * @param  int     $lon
+     *
+     * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
     public static function search_v2($text, $select = "" , $filter = "" , $lat = 0 , $lon = 0)
     {
         try{
@@ -135,6 +181,17 @@ class MapirLaravel
             return json_decode($e->getResponse()->getBody());
         }
     }
+
+    /**
+     * @param          $text
+     * @param  string  $select
+     * @param  string  $filter
+     * @param  int     $lat
+     * @param  int     $lon
+     *
+     * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
     public static function searchAutocomplete_v2($text, $select = "" , $filter = "" , $lat = 0 , $lon = 0)
     {
         try{
@@ -172,7 +229,14 @@ class MapirLaravel
             return json_decode($e->getResponse()->getBody());
         }
     }
-    
+
+    /**
+     * @param $origins
+     * @param $destinations
+     *
+     * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
     public static function distanceMatrix($origins, $destinations)
     {
         try{
