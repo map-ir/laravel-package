@@ -15,8 +15,8 @@
         }
     },
     "require": {
-        "laravel/framework": "^5.4",
-        "guzzlehttp/guzzle": "~6.0",
+        "laravel/framework": ">=5.4,<9.29",
+        "guzzlehttp/guzzle": "~6.0|~7.0",
         "ext-json": "*"
     },
     "extra": {
